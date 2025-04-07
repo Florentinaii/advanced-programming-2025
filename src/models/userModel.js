@@ -1,3 +1,5 @@
+import crypto from 'crypto';
+
 // In-memory storage
 const users = {};
 
@@ -13,7 +15,7 @@ class User {
   }
 
   static create(userData) {
-    const id = require('crypto').randomBytes(16).toString('hex');
+    const id = crypto.randomBytes(16).toString('hex');
     const user = new User(
       id,
       userData.email,
@@ -37,14 +39,18 @@ class User {
     const user = users[id];
     if (!user) return null;
     
-    Object.keys(updateData).forEach(key => {
-      if (key !== 'id' && key !== 'password' && user[key] !== undefined) {
-        user[key] = updateData[key];
-      }
-    });
+    // Prevent updating protected fields
+    const { password, id: _, ...safeUpdates } = updateData;
+    
+    Object.assign(user, safeUpdates);
     
     return user;
   }
+
+  // New helper method to get all users (for debugging)
+  static getAll() {
+    return Object.values(users);
+  }
 }
 
-module.exports = User;
+export default User;

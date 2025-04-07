@@ -1,16 +1,16 @@
-require('dotenv').config();
-const express = require('express');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+import 'dotenv/config';
+import express from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+
+import userRoutes from './src/routes/userRoutes.js';
+import authRoutes from './src/routes/authRoutes.js';
 
 const app = express();
 
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
-
-const userRoutes = require('./src/routes/userRoutes');
-const authRoutes = require('./src/routes/authRoutes');
 
 // Routes
 app.use('/users', userRoutes);
