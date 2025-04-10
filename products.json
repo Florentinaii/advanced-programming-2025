@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1744272243548",
+    "name": "iPhone 15",
+    "description": "Smartphone i ri nga Apple",
+    "price": 999,
+    "category": "Telefon",
+    "inStock": true,
+    "createdAt": "2025-04-10T08:04:03.548Z",
+    "updatedAt": "2025-04-10T08:04:03.549Z"
+  },
+  {
+    "id": "1744272285292",
+    "createdAt": "2025-04-10T08:04:45.292Z",
+    "updatedAt": "2025-04-10T08:04:45.295Z"
+  },
+  {
+    "id": "1744272420821",
+    "name": "iPhone 15",
+    "description": "Smartphone i ri nga Apple",
+    "price": 999,
+    "category": "Telefon",
+    "inStock": true,
+    "createdAt": "2025-04-10T08:07:00.821Z",
+    "updatedAt": "2025-04-10T08:07:00.821Z"
+  },
+  {
+    "id": "1744272522541",
+    "name": "iPhone 15",
+    "description": "Smartphone i ri nga Apple",
+    "price": 999,
+    "category": "Telefon",
+    "inStock": true,
+    "createdAt": "2025-04-10T08:08:42.541Z",
+    "updatedAt": "2025-04-10T08:08:42.541Z"
+  }
+]
